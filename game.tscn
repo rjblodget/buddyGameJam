@@ -1,0 +1,109 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Crate.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 437.0
+margin_top = 474.0
+margin_right = 525.0
+margin_bottom = 525.0
+text = "game"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2( 10, 10 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 16, 32 )
+
+[node name="Crate" parent="." instance=ExtResource( 4 )]
+position = Vector2( 48, 32 )
+
+[node name="walls" type="Node2D" parent="."]
+position = Vector2( 0, 64 )
+
+[node name="Wall" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 16, -64 )
+
+[node name="Wall2" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 0, -32 )
+
+[node name="Wall3" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 0, -48 )
+
+[node name="Wall4" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 0, -64 )
+
+[node name="Wall5" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 0, -16 )
+
+[node name="Wall6" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+
+[node name="Wall7" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 0, 16 )
+
+[node name="Wall8" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 0, 32 )
+
+[node name="Wall9" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 16, 32 )
+
+[node name="Wall10" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 32, 32 )
+
+[node name="Wall11" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 48, 32 )
+
+[node name="Wall12" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 32, -64 )
+
+[node name="Wall13" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 48, -64 )
+
+[node name="Wall14" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 64, -64 )
+
+[node name="Wall15" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 80, -64 )
+
+[node name="Wall16" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 96, -64 )
+
+[node name="Wall17" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 112, -64 )
+
+[node name="Wall18" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 112, -48 )
+
+[node name="Wall19" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 112, -32 )
+
+[node name="Wall20" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 112, -16 )
+
+[node name="Wall21" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 112, 0 )
+
+[node name="Wall22" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 112, 16 )
+
+[node name="Wall23" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 112, 32 )
+
+[node name="Wall24" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 96, 32 )
+
+[node name="Wall25" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 80, 32 )
+
+[node name="Wall26" parent="walls" instance=ExtResource( 3 )]
+position = Vector2( 64, 32 )
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
