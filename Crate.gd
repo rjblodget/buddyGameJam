@@ -9,14 +9,15 @@ var inputs = {
 	'ui_right': Vector2.RIGHT
 }
 var gridSize = 16
+var speed = 2.0
 
 
 
-func move(dir):
-	var distance = inputs[dir] * gridSize
+func move(dir, delta):
+	var distance = inputs[dir] * (gridSize/2)
 	ray.cast_to = distance
 	ray.force_raycast_update()
 	if !ray.is_colliding():
-		position += distance
+		position += distance * speed * delta
 		return true
 	return false

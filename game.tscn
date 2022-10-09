@@ -17,10 +17,11 @@ text = "game"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
-zoom = Vector2( 10, 10 )
+current = true
+zoom = Vector2( 0.125, 0.19 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 16, 32 )
+position = Vector2( 16, 16 )
 
 [node name="Crate" parent="." instance=ExtResource( 4 )]
 position = Vector2( 48, 32 )

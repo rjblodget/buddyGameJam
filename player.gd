@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
 onready var ray = $playerRay
-var speed = 0.25
+var speed = 2
 var inputs = {
-	'ui_up': Vector2(0, -speed),
-	'ui_left': Vector2(-speed, 0),
-	'ui_down': Vector2(0, speed),
-	'ui_right': Vector2(speed, 0)
+	'ui_up': Vector2.UP,
+	'ui_left': Vector2.LEFT,
+	'ui_down': Vector2.DOWN,
+	'ui_right': Vector2.RIGHT
 }
 var gridSize = 16
 var curDir = 'ui_left'
@@ -15,22 +15,22 @@ func _process(delta):
 	for dir in inputs.keys():
 		if Input.is_action_just_pressed(dir):
 			curDir = dir
-	move(curDir)
+	move(curDir, delta)
 
 
 
-func move(dir):
-	var distance = (inputs[dir] * gridSize)
+func move(dir, delta):
+	var distance = inputs[dir] * (gridSize/2)
 	
 	ray.cast_to = distance
 	ray.force_raycast_update()
 	if !ray.is_colliding():
-		position += distance
+		position += distance * speed * delta
 	else:
 		var collider = ray.get_collider()
 		if collider.is_in_group('box'):
-			if collider.move(dir):
-				position += distance
+			if collider.move(dir, delta):
+				position += distance * speed * delta
 			else:
 				rotate(dir)
 		else:
