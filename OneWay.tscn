@@ -1,18 +1,20 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://headstone.png" type="Texture" id=1]
+[ext_resource path="res://oneway-sheet.png" type="Texture" id=1]
 [ext_resource path="res://Crate.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 8 )
 
-[node name="Crate" type="KinematicBody2D" groups=["box"]]
+[node name="OneWay" type="KinematicBody2D" groups=["OneWay"]]
 position = Vector2( 32, 0 )
 script = ExtResource( 2 )
 
-[node name="Box" type="Sprite" parent="."]
+[node name="OneWayBox" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
+hframes = 5
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 8, 8 )

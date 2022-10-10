@@ -21,3 +21,15 @@ func move(dir, delta):
 		position += distance * speed * delta
 		return true
 	return false
+
+func checkDirection(dir):
+	if dir == 'ui_right' and $OneWayBox.frame == 1:
+		return true
+	elif dir == 'ui_left' and $OneWayBox.frame == 2:
+		return true
+	elif dir == 'ui_up' and $OneWayBox.frame == 3:
+		return true
+	elif dir == 'ui_down' and $OneWayBox.frame == 4:
+		return true
+	else:
+		return false
