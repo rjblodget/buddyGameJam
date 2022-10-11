@@ -10,7 +10,7 @@ margin_left = 384.0
 margin_top = 410.0
 margin_right = 548.0
 margin_bottom = 509.0
-text = "Licesnses"
+text = "licences"
 
 [node name="GodotLicense" type="RichTextLabel" parent="."]
 margin_left = 173.0

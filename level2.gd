@@ -18,4 +18,4 @@ func _ready():
 
 
 func _on_LevelTimer_timeout():
-	get_tree().change_scene("res://level2.tscn")
+	get_tree().change_scene("res://level3.tscn")

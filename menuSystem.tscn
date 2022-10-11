@@ -31,7 +31,7 @@ margin_left = 376.0
 margin_top = 456.0
 margin_right = 560.0
 margin_bottom = 524.0
-text = "Licesnces"
+text = "licences"
 
 [node name="NameOfGameLabel" type="RichTextLabel" parent="."]
 margin_left = 425.0
