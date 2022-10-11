@@ -53,6 +53,7 @@ func rotate(dir):
 	rotateCount += 1
 	if rotateCount == 4:
 		get_parent().get_node("YouWin!").visible = true
+		get_parent().get_node("LevelTimer").start()
 	if dir == 'ui_up':
 		curDir = 'ui_right'
 	elif dir == 'ui_right':

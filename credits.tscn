@@ -17,12 +17,15 @@ anchor_right = 0.106
 margin_left = 373.0
 margin_top = 175.0
 margin_right = 598.0
-margin_bottom = 307.0
+margin_bottom = 346.0
 text = "game director:
 Freedom Blodget
 
 logo art:
 Sara Jay McGuffey
+
+game art:
+Kenny.kl
 
 Game engine used:
 Godot"
