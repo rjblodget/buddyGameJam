@@ -148,4 +148,11 @@ margin_right = 192.0
 margin_bottom = 96.0
 text = "the Ghost has moved on"
 
+[node name="resetLevel" type="Button" parent="."]
+margin_top = 96.0
+margin_right = 48.0
+margin_bottom = 116.0
+text = "reset level"
+
 [connection signal="timeout" from="LevelTimer" to="." method="_on_LevelTimer_timeout"]
+[connection signal="button_up" from="resetLevel" to="player" method="_on_resetLevel_button_up"]

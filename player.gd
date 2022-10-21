@@ -62,3 +62,6 @@ func rotate(dir):
 		curDir = 'ui_left'
 	else:
 		curDir = 'ui_up'
+
+func _on_resetLevel_button_up():
+	get_tree().reload_current_scene()
